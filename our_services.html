@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Spasibo</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+   .page_container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  line-height: 1.6;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .custom-nav-link {
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0 18px; /* space between links */
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    color: black !important;
+  }
+
+  /* Hover effect */
+  .custom-nav-link:hover {
+    background-color: purple;
+    color: white !important;
+    border-color: purple;
+  }
+
+  /* Disabled still visible */
+  .custom-nav-link.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 14px;
+  color: #555;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #0d47a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+h2::before {
+  content: "➕";
+  font-size: 22px;
+  color: #0d47a1;
+}
+
+p {
+  max-width: 800px;
+  font-size: 16px;
+  margin: 20px auto;
+}
+
+.services-list {
+  margin: 30px auto;
+  padding-left: 0;
+  list-style: none;
+  max-width: 600px;
+  text-align: left;
+}
+
+.services-list li {
+  font-size: 18px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.services-list li::before {
+  content: "➕";
+  margin-right: 10px;
+  font-size: 18px;
+  color: #0d47a1;
+}
+
+/* Images section */
+.images-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.images-section img {
+  flex: 1;
+  max-width: 48%;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Big centered image */
+#img2 {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* Special clipped images */
+.container11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+}
+
+
+        .img11 {
+            height: 570px;
+            width: 43%;
+            /* Using a simple margin for a 20px space between */
+            clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+            margin-top: 45px;
+        }
+
+        .img12 {
+            height: 730px; 
+            /* Using a simple margin for a 20px space between */
+            margin-left: -20px;
+            clip-path: polygon(0 23%, 100% 0, 100% 100%, 0% 100%);
+            margin-bottom: 130px;
+            width: 500px;
+        }
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .services-list li {
+    font-size: 16px;
+  }
+  .images-section img {
+    max-width: 100%;
+  }
+  .img11, .img12 {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  .images-section {
+    flex-direction: column;
+  }
+  .images-section img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  .shape {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .img11, .img12 {
+    width: 80%;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+  
+footer{
+  background-color:burlywood;
+  color: black;
+  text-align: center;
+  height: 50px;
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <!-- Logo (keeps top center) -->
+  <nav class="navbar navbar-light justify-content-center" style="background-color: none;">
+    <a class="navbar-brand d-flex flex-column align-items-center" href="#">
+      <img src="Images/SPASIBO.png" width="200" height="90" style="margin-left: 10px;" class="d-inline-block" alt="">
+      <span class="mt-2"></span>
+    </a>
+  </nav>
+
+  <!-- Toggler for mobile -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <!-- Centered nav links -->
+    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link custom-nav-link" href="index.html">Home <span class="visually-hidden">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link custom-nav-link" href="our_services.html">Our Services</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle custom-nav-link" href="#" id="navbarDropdown" role="button" 
+           data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled custom-nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+
+    <!-- Search box stays at right -->
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+ <!--  <header>
+   <span>2025</span>
+    <span>SPASIBO | PAGE 4</span>
+  </header>
+-->
+  <div class="page_container">
+  <div class="container">
+    <div class="flex">
+    <h1>Our Services</h1>
+    <h2>Language & Intercultural Competence</h2>
+
+    <p>
+      The Spasibo International Leadership Service for Language and Intercultural Competence 
+      stands as a vital cornerstone of our mission to empower youth for transformative global 
+      leadership. In an era where the world is more interconnected than ever, successful 
+      communication involves far more than just mastering a language; it requires a profound 
+      appreciation for the intricate cultural nuances, values, and communication styles that 
+      shape our interactions. This service is meticulously designed to empower young leaders 
+      with the essential linguistic skills and cultural intelligence they need to adeptly 
+      navigate complex international landscapes. By fostering sensitivity, effectiveness, and 
+      diplomatic insight, we are shaping the next generation of leaders who are ready to make a 
+      meaningful impact on the global stage.
+    </p>
+</div>
+    <ul class="services-list">
+      <li>Russian Language Integration Service</li>
+      <li>Multilingual Communication Workshops</li>
+      <li>Intercultural Dialogue & Diplomacy Forums</li>
+      <li>Youth Exchange and Networking Platforms</li>
+    </ul>
+
+    <div class="images-section">
+  <img src="Images/TP1.png" class="img1" alt="Students">
+
+     <img src="Images/TP2.png" class="img2" alt="Building">
+     </div> 
+  </div>
+
+  <div class="container">
+    <div class="flex">
+    <h1>Our Services</h1>
+    <h2>Strategic Partnerships & Advocacy</h2>
+
+    <p>
+      The "Strategic Partnerships & Advocacy" serviceat Spasibo International Leadership stands as a cornerstone of our mission, harnessing diplomatic expertise 
+      to significantly amplify our impact and broaden the horizons of...(a place of opportunities for youth ). This essential service is dedicated to cultivating 
+      and strengthening relationships with influential stakeholders across diverse sectors. We actively advocate for policies and initiatives that empower young people worldwide. By approaching our work with 
+      a deep understanding of international realtions, cultural nuances, and political landscapes, we aim to create meaningful changes that benefit the next generation on a global scale
+    </p>
+</div>
+    <ul class="services-list">
+      <li>Government & Institutional Collaboration</li>
+      <li>Youth Policy Advocacy</li>
+      <li>Research & Thought Leadership</li>
+     
+    </ul>
+
+    <div class="images-section">
+  
+
+     <img src="Images/img1.png" id="img2" alt="Building">
+     </div> 
+  </div>
+
+ <div class="container">
+    <div class="flex">
+    <h1>Our Services</h1>
+    <h2>Global Opportunity & Mobility</h2>
+
+    <p>
+      The Spasibo International Leadership Service is dedicated to "Empowering Youth Through Global Opportunity & Mobility," serving as a cornerstone
+      of our mission to establish .... (a place of opportunities for youth). This initiative is transformative, as it breaks down geographical and socio-economic barriers
+      that often limit young people. By providing access to a diverse array of opportunities, we empower the next generation to thrive in their personal 
+      academic, and professional journeys. Join us in creating a future where every young individual can unlock their full potential and pave the way for a 
+      brighter tomorrow
+    <!--  -->
+    </p>
+</div>
+    <ul class="services-list">
+      <li>Government & Institutional Collaboration</li>
+      <li>Youth Policy Advocacy</li>
+      <li>Research & Thought Leadership</li>
+     
+    </ul>
+
+    <div class="images-section">
+  
+
+     <img src="Images/img2.png" id="img2" alt="Building">
+     </div> 
+  </div>
+
+  <div class="container">
+    <div class="flex">
+    <h1>Our Services</h1>
+    <h2>Youth Leadership Development & Empowerment</h2>
+
+    <p>
+    The Spasibo International Leadership service for Youth Leadership Development and Empowerment
+     stands as a vital pillar of our mission to cultivate an inspiring new generation of dynamic, globally-minded leaders. This
+      comprehensive program empowers young individuals by equipping them with the crucial skills, knowledge, and mindset neccessary
+      to excel in an increasingly complex and interconnected world. Embracing our core philosophy of being...(a plcae of opportunities for the youth), we are committed to unlocking 
+      their full potential and paving the way for their future success. Join us in shaping the leaders of tomorrow!  
+    </p>
+</div>
+    <ul class="services-list">
+      <li>Global Mentorship Programs</li>
+      <li>International Leadership Academies</li>
+      <li>Youth Innovation & Entrepreneurship Hub</li>
+      <li>Public Speaking & Diplomatic Commuication Training</li>
+    </ul>
+<div class="container11">
+    <div class="shape">
+  <img src="Images/Screenshot spa.png" class="img11" alt="Students">
+
+     <img src="Images/img3.png" class="img12" alt="Building">
+     </div> 
+  </div>
+</div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<footer> &copy; &nbsp; <b>2025 Spasibo International </b></footer>
+</body>
+</html>

@@ -1,0 +1,270 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page_container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  margin-top: 10%;
+ 
+      background: #fff;
+      color: #000;
+}
+
+
+
+ @font-face {
+      font-family: 'Inter';
+      src: url('assets/fonts/Inter-Regular.woff2') format('woff2'),
+           url('assets/fonts/Inter-Regular.woff') format('woff');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('assets/fonts/Inter-Bold.woff2') format('woff2'),
+           url('assets/fonts/Inter-Bold.woff') format('woff');
+      font-weight: 700;
+    }
+
+   
+    .container {
+      position: relative;
+      min-height: 100vh;
+      max-width: 900px;
+      margin: 0 auto;
+      background: gainsboro;
+      overflow: hidden;
+       display: block;
+  width: 100%; /
+    }
+
+    /* Top polygon */
+    .top-shape {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 45vh;
+      overflow: hidden;
+    }
+    .top-shape svg {
+      width: 100%;
+      height: 100%;
+    }
+    .top-shape img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    }
+
+    /* Bottom polygon */
+    .bottom-shape {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 100%;
+      height: 40vh;
+      overflow: hidden;
+    }
+    .bottom-shape svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Top labels */
+    .year-label {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+      -webkit-user-select: none;
+    }
+    .page-label {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: #000;
+      font-size: 12px;
+      font-weight: 400;
+     -webkit-user-select: none;
+    }
+
+    /* Content */
+    .content {
+      position: relative;
+      padding: 40vh 20px 30vh;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .content h1 {
+      color: #264a9e;
+      font-weight: 800;
+      font-size: 2.2rem;
+      line-height: 1.2;
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    .blocks {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .block {
+      flex: 1;
+    }
+
+    .block h2 {
+      color: #264a9e;
+      font-weight: 800;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .block p {
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Responsive for desktop */
+    @media (min-width: 768px) {
+      .content h1 {
+        text-align: left;
+        font-size: 2.8rem;
+      }
+      .blocks {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      .block p {
+        text-align: left;
+        margin: 0;
+      }
+    }
+.card {
+ clear: both;
+   min-height: 100vh;
+      width: 900px;
+  background: #fff;
+  display: block;
+  width: 100%; 
+  overflow: hidden;
+margin-top: 2%;
+}
+
+/* Background image container */
+.image-container {
+  position: relative;
+  height: 70vh;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Blue top bar */
+.blue-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: #1d4ed8;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   clip-path: polygon(0 0, 0% 0, 50% 0%, 0% 100%);
+}
+
+/* White slanted shape */
+.white-slant {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: white;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0% 100%);
+}
+
+/* Contact info */
+.contact-info {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  color: #333;
+   display: block;
+        height: 10vh; 
+        float: right;
+        margin-right: 25%;
+    }
+
+.footer-blue-bar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: #1d4ed8;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   clip-path: polygon(100% 100%, 100% 0, 50% 100%, 0 100%);
+}
+
+
+.contact-info h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1d4ed8;
+  margin-bottom: 15px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;              /* spacing between container and card */
+  max-width: 1000px;      /* limit width for desktop */
+  margin: 0 auto;
+  padding: 20px;
+}
